@@ -1,13 +1,27 @@
-# Auto detect text files and perform LF normalization
-* text=auto
-# Sistema Parqueadero Autos Colombia
+print("Sistema Parqueadero Autos Colombia")
 
-Proyecto desarrollado para Ingeniería de Software (JOAQUIN FERNANDO AGUILAR) - PREICA2601B010059
+usuarios = []
 
-El Parqueadero “Autos Colombia” parqueadero que presta el servicio de parqueadero por mensualidad necesita un desarrollo de software para la gestión de sus operaciones diarias que le permita, registrar las entradas y salidas de los vehículos, registrar usuarios, manejar las celdas, y registrar novedades ocurridas sobre determinado vehículo en el parqueadero y gestionar los pagos. Esto incluye el análisis de los siguientes requerimientos funcionales:
+def registrar_usuario():
+    nombre = input("Nombre: ")
+    documento = input("Documento: ")
+    
+    usuario = {
+        "nombre": nombre,
+        "documento": documento
+    }
+    
+    usuarios.append(usuario)
+    print("Usuario registrado")
 
-Gestión de la entrada y salida de vehículos.
-
-Gestión de usuarios y gestión de celdas.
-
-Gestión de pagos.
+while True:
+    print("\n1. Registrar usuario")
+    print("2. Salir")
+    
+    opcion = input("Seleccione opción: ")
+    
+    if opcion == "1":
+        registrar_usuario()
+    elif opcion == "2":
+        print("Saliendo del sistema...")
+    break
